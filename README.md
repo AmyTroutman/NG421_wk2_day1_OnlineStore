@@ -57,7 +57,7 @@ https://blackrockdigital.github.io/startbootstrap-shop-homepage/
 * Create a method for `getShoppingCart` with return type `Array<Product>`
 * Create a method for `addToCart` that takes an argument product of type `Product` and pushes it to the shopping cart array
 * Make sure to import the service and add to the providers array in `app.module.ts`. The generator might not do this.
-
+//no longer necessary because of angular 8 using providedIn
 ### app.component.ts
 * Create a property called products of type `Array<Product>`
 * Implement a constructor and `ngOnInit`
