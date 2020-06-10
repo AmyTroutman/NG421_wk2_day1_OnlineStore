@@ -1,14 +1,28 @@
 <div class="col-sm-4 col-lg-4 col-md-4">
     <div class="thumbnail">
         <img [src]="product.imgUrl" alt="" />
-        <div class="caption">
+        <div class="">
             <h4 class="pull-right">{{product.price}}</h4>
-            <h4><a href="#">{{product.name}}</a>
+            <h4 class="px-2"><a href="#">{{product.name}}</a>
             </h4>
+            
             <p>{{product.description}}</p>
         </div>
         <div class="ratings">
             <p class="pull-right">{{product.reviews}} reviews</p>
+            <p>
+                <!--I knew there had to be a better way. Turns out there is an else.-->
+                <span class="glyphicon glyphicon-star"></span>
+                <span *ngIf="product.rating >= 2" class="glyphicon glyphicon-star"></span>
+                <ng-template #elseBlock><span class="glyphicon glyphicon-star-empty"></span></ng-template>
+                <span *ngIf="product.rating >= 3" class="glyphicon glyphicon-star"></span>
+                <ng-template #elseBlock><span class="glyphicon glyphicon-star-empty"></span></ng-template>
+                <span *ngIf="product.rating >= 4" class="glyphicon glyphicon-star"></span>
+                <ng-template #elseBlock><span class="glyphicon glyphicon-star-empty"></span></ng-template>
+                <span *ngIf="product.rating >= 5" class="glyphicon glyphicon-star"></span>
+                <ng-template #elseBlock><span class="glyphicon glyphicon-star-empty"></span></ng-template>
+            </p>
+            <!--First try at displaying the correct stars. Definitely has to be a better way.
             <p *ngIf="product.rating == 5">
                 <span class="glyphicon glyphicon-star"></span>
                 <span class="glyphicon glyphicon-star"></span>
@@ -44,7 +58,7 @@
                 <span class="glyphicon glyphicon-star-empty"></span>
                 <span class="glyphicon glyphicon-star-empty"></span>
             </p>
-
+-->
 
         </div>
         <button class="btn btn-sm" (click)="onProductAdded()">Add to Cart</button>
