@@ -24,7 +24,7 @@
                     <!--</Carousel>-->
                     <div class="row">
                         <!--<ProductDetail>-->
-                        <app-product-detail></app-product-detail>
+                        <app-product-detail *ngFor="let currentProduct of products" [product]="currentProduct"></app-product-detail>
                         <!--</ProductDetail>-->
 
 
