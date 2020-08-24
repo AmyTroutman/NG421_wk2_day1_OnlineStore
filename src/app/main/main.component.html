@@ -1,0 +1,26 @@
+<div class="row">
+
+    <div class="col-md-3">
+        <p class="lead">Shop Name</p>
+        <div class="list-group">
+            <a href="#" class="list-group-item">Category 1</a>
+            <a href="#" class="list-group-item">Category 2</a>
+            <a href="#" class="list-group-item">Category 3</a>
+        </div>
+    </div>
+
+    <div class="col-md-9">
+        <!--<Carousel>-->
+        <app-carousel></app-carousel>
+        <!--</Carousel>-->
+        <div class="row">
+            <!--<ProductDetail>-->
+            <app-product-detail (productAdded)="productWasAdded($event)" *ngFor="let currentProduct of products" [product]="currentProduct"></app-product-detail>
+            <!--</ProductDetail>-->
+
+
+        </div>
+
+    </div>
+
+</div>

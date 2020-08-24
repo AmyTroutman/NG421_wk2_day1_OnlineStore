@@ -1,2 +1,5 @@
-<p>This is your cart</p>
+<div>
+    <h3>Cheque Out Your Queart!</h3>
+        <p *ngFor="let item of cart">{{item.name}} <button (click)="remove(item)">Remove</button></p>
+</div>
 

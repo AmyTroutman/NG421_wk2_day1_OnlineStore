@@ -13,8 +13,8 @@
       
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li>
-                    <a href="#">About</a>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['']">Home</a>
                 </li>
                 <li>
                     <a href="#">Services</a>
@@ -22,8 +22,8 @@
                 <li>
                     <a href="#">Contact</a>
                 </li>
-                <li >
-                    <a href="#">Items In Cart: {{shoppingCart.length}}</a>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/cart']">Items In Cart: {{shoppingCart.length}}</a>
                 </li>
             </ul>
         </div>
