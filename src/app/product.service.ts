@@ -24,4 +24,12 @@ export class ProductService {
   addToCart(product: IProduct) {
     this.shoppingCart.push(product);
   }
+
+  getProduct(id: number) {
+    return this.products.filter(item => item.id === id);
+  }
+
+  getCategory(cat: number) {
+    return this.products.filter(item => item.category === cat);
+  }
 }

@@ -11,6 +11,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { CartComponent } from './cart/cart.component';
 import { MainComponent } from './main/main.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { MainComponent } from './main/main.component';
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component: MainComponent},
-      { path: 'cart', component: CartComponent}
+      { path: 'cart', component: CartComponent},
+      { path: 'product/:id', component: ProductDetailComponent},
     ])
   ],
   providers: [{provide: APP_BASE_HREF, useValue: ''}],

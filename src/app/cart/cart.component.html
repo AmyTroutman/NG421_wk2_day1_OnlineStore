@@ -1,5 +1,14 @@
 <div>
-    <h3>Cheque Out Your Queart!</h3>
-        <p *ngFor="let item of cart">{{item.name}} <button (click)="remove(item)">Remove</button></p>
+    <h2 class="text-center" style="text-decoration: underline;">Cheque Out Your Queart!</h2>
+    <div *ngIf="cart.length!=0">
+        <div style="margin-left: 10%;" *ngFor="let item of cart">{{item.name}} <button (click)="remove(item)">Remove</button></div>
+        <br>
+        <div class="text-center">
+            <p>Looking Good! Ready to own this stuff??</p>
+            <button>Check Out!</button>
+        </div>
+    </div>
+    <div *ngIf="cart.length===0">
+        <h3>Where's your stuff??! <a [routerLink]="['']">Get Shopping!!!</a></h3>
+    </div>
 </div>
-

@@ -6,4 +6,5 @@ export interface IProduct {
     rating: number;
     imgUrl: string;
     price: string;
+    category: number;
 }
